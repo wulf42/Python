@@ -1,7 +1,5 @@
 import os
 os.system('CLS')#clear
-
-
 print("Zadanie1: ")
 calkowita=4
 striing="Wyraz"
@@ -34,7 +32,7 @@ print(f"|4.8|= {abs(4.8)}") #moze modfs
 print("Zadanie5: ")
 imie="WOJTEK"
 nazwisko="PAKOCA"
-print(imie.capitalize()+" "+nazwisko.capitalize())
+print(imie.capitalize(), nazwisko.capitalize())
 
 print("Zadanie6: ")
 tekst="tekst piosenki la la piosenka lo la la la la costam la la"
