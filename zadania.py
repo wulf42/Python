@@ -43,3 +43,14 @@ samochod="czerwony"
 print(samochod[1]+samochod[-1])
 
 print("Zadanie8: ")
+print(tekst.split())
+
+print("Zadanie9: ")
+zmienna_1="wyraz"
+zmienna_2="15.2"
+zmienna_3=0xDA5             
+print("Zmienne: %(z1)s, %(z2)s, %(z3)s" %{"z1":zmienna_1,"z2":zmienna_2,"z3":zmienna_3}) #wszystko jako string
+
+print("Zadanie10: ")
+filmy= ["Skazani na Shawshank","Nietykalni","Zielona mila","Ojciec chrzestny","Dwunastu gniewnych ludzi","Forrest Gump","Joker"]
+print(filmy.sort())
