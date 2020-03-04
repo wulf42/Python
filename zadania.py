@@ -1,5 +1,6 @@
 import os
-os.system('cls')#clear
+os.system('CLS')#clear
+
 
 print("Zadanie1: ")
 calkowita=4
@@ -25,9 +26,10 @@ print("operatory przedrostkowe")
 
 print("Zadanie4: ")
 from math import *
-print("e^10= "+str(pow(e,10)))
-print("|3.55|= "+str(abs(3.55))) #moze modfs
-print("|4.8|= "+str(abs(4.8)))
+
+print(f"e^10={pow(e,10)}") 
+print(f"|3.55|= {abs(3.55)}") #moze modfs
+print(f"|4.8|= {abs(4.8)}") #moze modfs
 
 print("Zadanie5: ")
 imie="WOJTEK"
@@ -36,7 +38,7 @@ print(imie.capitalize()+" "+nazwisko.capitalize())
 
 print("Zadanie6: ")
 tekst="tekst piosenki la la piosenka lo la la la la costam la la"
-print("ilosc la w tekscie: "+str(tekst.count("la")))
+print(f"ilosc la w tekscie: {tekst.count('la')}")
 
 print("Zadanie7: ")
 samochod="czerwony"
@@ -49,7 +51,7 @@ print("Zadanie9: ")
 zmienna_1="wyraz"
 zmienna_2="15.2"
 zmienna_3=0xDA5             
-print("Zmienne: %(z1)s, %(z2)s, %(z3)s" %{"z1":zmienna_1,"z2":zmienna_2,"z3":zmienna_3}) #wszystko jako string
+print(f"{zmienna_1}, {zmienna_2}, {zmienna_3}") 
 
 print("Zadanie10: ")
 filmy= ["Skazani na Shawshank","Nietykalni","Zielona mila","Ojciec chrzestny","Dwunastu gniewnych ludzi","Forrest Gump","Joker"]
