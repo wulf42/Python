@@ -12,13 +12,13 @@ print(ulamek)
 print("Zadanie2: ")
 a=5
 b=4
-print("1.Dodawanie: "+str(a)+" + "+str(b)+" = "+str(a+b))
-print("2.Odejmowanie: "+str(a)+" - "+str(b)+" = "+str(a-b))
-print("3.Mnożenie: "+str(a)+" * "+str(b)+" = "+str(a*b))
-print("4.Dzielenie: "+str(a)+" / "+str(b)+" = "+str(a/b))
-print("5.Dzielenie całkowite: "+str(a)+" / "+str(b)+" = "+str(a//b))
-print("6.Reszta z dzielenia: "+str(a)+" / "+str(b)+" = "+str(a%b))
-print("7.Potęgowanie: "+str(a)+" do potęgi "+str(b)+" = "+str(pow(a,b)))
+print(f"1.Dodawanie: {a}+{b}={a+b}")
+print(f"2.Odejmowanie: {a}-{b}={a-b}")
+print(f"3.Mnożenie: {a}*{b}={a*b}")
+print(f"4.Dzielenie: {a}/{b}={a/b}")
+print(f"5.Dzielenie całkowite: {a}/{b}={a//b}")
+print(f"6.Reszta z dzielenia: {a}%{b}={a%b}")
+print(f"7.Potęgowanie: {a}%{b}={a**b} ")
 print("Zadanie3: ")
 print("operatory przedrostkowe")
 
@@ -53,4 +53,5 @@ print("Zmienne: %(z1)s, %(z2)s, %(z3)s" %{"z1":zmienna_1,"z2":zmienna_2,"z3":zmi
 
 print("Zadanie10: ")
 filmy= ["Skazani na Shawshank","Nietykalni","Zielona mila","Ojciec chrzestny","Dwunastu gniewnych ludzi","Forrest Gump","Joker"]
-print(filmy.sort())
+filmy.sort()
+print(filmy)
