@@ -26,7 +26,7 @@ print("operatory przedrostkowe")
 print("Zadanie4: ")
 from math import *
 print("e^10= "+str(pow(e,10)))
-print("|3.55|= "+str(abs(3.55))) #moze modf
+print("|3.55|= "+str(abs(3.55))) #moze modfs
 print("|4.8|= "+str(abs(4.8)))
 
 print("Zadanie5: ")
