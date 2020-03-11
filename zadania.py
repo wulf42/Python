@@ -55,3 +55,10 @@ print("Zadanie10: ")
 filmy= ["Skazani na Shawshank","Nietykalni","Zielona mila","Ojciec chrzestny","Dwunastu gniewnych ludzi","Forrest Gump","Joker"]
 filmy.sort()
 print(filmy)
+
+print("Zadanie11: ")
+pi=["0","\u03A0/6","\u03A0/4","\u03A0/3","\u03A0/2","\u03A0"]
+stopnie=["0°","30°","45°","60°","90°","180°"]
+sinus=[0,1/2,"√2/2","√3/2",1,0]
+print(pi,stopnie,sinus)
+
