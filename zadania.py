@@ -21,7 +21,6 @@ print(f"7.Potęgowanie: {a}%{b}={a**b} ")
 print("Zadanie3: ")
 print("operatory przedrostkowe")
 
-
 print("Zadanie4: ")
 from math import *
 
