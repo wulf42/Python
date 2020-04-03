@@ -1,11 +1,11 @@
-#imie="Marianna"
-#lista=[]
+# imie="Marianna"
+# lista=[]
 # for litera in imie:
 #     lista.append(litera.upper())                słabo
 # print (lista)
-#print([litera.upper() for litera in imie])        #lepiej
-#lista = [print(litera.upper()) for litera in imie]        
-#print(lista)
+# print([litera.upper() for litera in imie])        #lepiej
+#lista = [print(litera.upper()) for litera in imie]
+# print(lista)
 
 # suma cyfr
 # liczba = 123456789
@@ -22,12 +22,12 @@
 # wynik=[]
 # for wiersz in lista:
 #     for element in wiersz:
-#         if element %2==0: 
+#         if element %2==0:
 #             wynik.append(element)
 # print (wynik)                                                        gorsze
-# imie = "Marianna"            
+# imie = "Marianna"
 #klucz,wartosc = (0,"M")
-#{0:"M",...}
+# {0:"M",...}
 # {para[0]:para[1] for para in enumerate(imie)}
 # slownik = {klucz:wartosc for klucz,wartosc in enumerate(imie)}
 # slownik[0] #klucz
@@ -36,7 +36,7 @@
 # slow_odwr={wartosc:klucz for klucz,wartosc in slownik.items()}
 # print(slow_odwr)
 
-#set
+# set
 # litery=set(imie)
 # print(litery)
 
@@ -53,27 +53,31 @@
 # [1,2],
 # [3,4]]
 # wynik=[]
-# [element for wiersz in lista for element in wiersz if element %2==0] 
+# [element for wiersz in lista for element in wiersz if element %2==0]
 # """
 #print(timeit(stmt=kod), number=1000000)
 
 
 def dodaj(liczba1, liczba2):
     return liczba1 + liczba2
-dodaj(2,3)
+
+
+dodaj(2, 3)
+
 
 def witaj(imie="Jan"):
     print(f'Witaj {imie}!')
+
+
 witaj()
 witaj("Arkadiusz")
 
-# import start as s 
+# import start as s
 # s.pow()
-imie="Malgorzata"
-print(imie[0]) #pierwszy
-print(imie[-1]) #ostatni
-print(imie[:]) #wszystko
-print(imie[-2:]) #2 ostatnie
-print(imie[::-2]) 
-#range(start,stop,step)
-
+imie = "Malgorzata"
+print(imie[0])  # pierwszy
+print(imie[-1])  # ostatni
+print(imie[:])  # wszystko
+print(imie[-2:])  # 2 ostatnie
+print(imie[::-2])
+# range(start,stop,step)
