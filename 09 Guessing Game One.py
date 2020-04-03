@@ -17,4 +17,4 @@ while(a != liczba):
     elif(liczba < a):
         print(f"Podano {liczba}, szukana liczba jest WIĘKSZA")
     else:
-        print(f"Podano {liczba}, UDAŁO SIĘ za {proba} RAZEM")
+        print(f"Podano {liczba}, Udało się! Zgadłeś losową liczbę z zakresu od 1 do {ile} za {proba} razem")
