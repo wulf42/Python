@@ -2,12 +2,11 @@ import msvcrt
 import os
 
 os.system('cls')
-gra = " 1. Papier\n 2. Nożyce\n 3. Kamień\n"
 granie = 1
 pkt1 = 0
 pkt2 = 0
 while (granie == 1):
-    print(f"{gra} Gracz 1:", end=" ")
+    print(f" 1. Papier\n 2. Nożyce\n 3. Kamień\n Gracz 1:", end=" ")
     a = int(msvcrt.getche())
     print("\n Gracz 2:", end=" ")
     b = int(msvcrt.getche())
@@ -26,10 +25,8 @@ while (granie == 1):
     granie = int(msvcrt.getche())
     os.system('cls')
 if(pkt1 > pkt2):
-    print(
-        f" Wygrał gracz pierwszy mając {pkt1} pkt, gracz drugi miał ich zaledwie {pkt2}")
+    print(f" Wygrał gracz pierwszy mając {pkt1} pkt, gracz drugi miał ich zaledwie {pkt2}")
 if(pkt1 < pkt2):
-    print(
-        f" Wygrał gracz pierwszy mając {pkt2} pkt, gracz drugi miał ich zaledwie {pkt1}")
+    print(f" Wygrał gracz pierwszy mając {pkt2} pkt, gracz drugi miał ich zaledwie {pkt1}")
 if(pkt1 == pkt2):
     print(f" Remis {pkt1} do {pkt2}")
