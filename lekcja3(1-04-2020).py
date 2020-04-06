@@ -177,3 +177,44 @@ class Słowa:
 
 slowo = Słowa("ala", "alaa")
 print(f"{slowo.wyświetl_wyrazy()}\n{slowo.sprawdz_czy_palindrom()}\n{slowo.sprawdz_czy_metagramy()}\n{slowo.sprawdz_czy_anagramy()}")
+
+# Zad. 7
+
+# Stwórz klasę Robaczek, która będzie sterować ruchami Robaczka. Klasa powinna przechowywać współrzędne x, y, krok (stała wartość kroku dla Robaczka), i powinna mieć następujące metody:
+
+# konstruktor – który nadaje wartość dla x, y i krok
+# idz_w_gore(ile_krokow) – metoda która przesuwa robaczka o ile_krokow*krok w odpowiednim kierunku i ustawia nowe wartości współrzędnych x i y
+# idz_w_dol(ile_krokow) – metoda która przesuwa robaczka o ile_krokow*krok w odpowiednim kierunku i ustawia nowe wartości współrzędnych x i y
+# idz_w_lewo(ile_krokow) – metoda która przesuwa robaczka o ile_krokow*krok w odpowiednim kierunku i ustawia nowe wartości współrzędnych x i y
+# idz_w_prawo(ile_krokow) – metoda która przesuwa robaczka o ile_krokow*krok w odpowiednim kierunku i ustawia nowe wartości współrzędnych x i y
+# pokaz_gdzie_jestes() – metoda, która wyświetla aktualne współrzędne Robaczka
+# Stwórz instancję klasy i sprawdź jak działają wszystkie metody
+print("Zadanie 7: ")
+class Robaczek:
+    def __init__(self, x, y,ile):
+        self.x = x
+        self.y = y
+        self.ile = ile
+    def idz_w_gore(self,ile):
+        self.y+=ile
+    def idz_w_dol(self,ile):
+        self.y-=ile
+    def idz_w_lewo(self,ile):
+        self.x-=ile
+    def idz_w_prawo(self,ile):
+        self.x+=ile
+    def pokaz_gdzie_jestes(self):
+        return f"Pozycja robaczka to {self.x}x i {self.y}y"
+robak=Robaczek(0,0,1)    
+print(robak.pokaz_gdzie_jestes())
+robak.idz_w_dol(15)
+print(robak.pokaz_gdzie_jestes())
+robak.idz_w_gore(16)
+print(robak.pokaz_gdzie_jestes())
+robak.idz_w_lewo(1)
+print(robak.pokaz_gdzie_jestes())
+robak.idz_w_prawo(5)
+print(robak.pokaz_gdzie_jestes())
+
+
+        
