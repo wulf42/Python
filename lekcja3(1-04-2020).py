@@ -190,22 +190,34 @@ print(f"{slowo.wyświetl_wyrazy()}\n{slowo.sprawdz_czy_palindrom()}\n{slowo.spra
 # pokaz_gdzie_jestes() – metoda, która wyświetla aktualne współrzędne Robaczka
 # Stwórz instancję klasy i sprawdź jak działają wszystkie metody
 print("Zadanie 7: ")
+
+
 class Robaczek:
-    def __init__(self, x, y,ile):
+    def __init__(self, x, y, ile):
         self.x = x
         self.y = y
         self.ile = ile
-    def idz_w_gore(self,ile):
-        self.y+=ile
-    def idz_w_dol(self,ile):
-        self.y-=ile
-    def idz_w_lewo(self,ile):
-        self.x-=ile
-    def idz_w_prawo(self,ile):
-        self.x+=ile
+
+    def idz_w_gore(self, ile):
+        self.y += ile
+
+    def idz_w_dol(self, ile):
+        self.y -= ile
+
+    def idz_w_lewo(self, ile):
+        self.x -= ile
+
+    def idz_w_prawo(self, ile):
+        self.x += ile
+
     def pokaz_gdzie_jestes(self):
         return f"Pozycja robaczka to {self.x}x i {self.y}y"
-robak=Robaczek(0,0,1)    
+
+    def __del__(self):
+        print("usunięto obiekt")
+
+
+robak = Robaczek(0, 0, 1)
 print(robak.pokaz_gdzie_jestes())
 robak.idz_w_dol(15)
 print(robak.pokaz_gdzie_jestes())
@@ -215,6 +227,6 @@ robak.idz_w_lewo(1)
 print(robak.pokaz_gdzie_jestes())
 robak.idz_w_prawo(5)
 print(robak.pokaz_gdzie_jestes())
-
-
-        
+del robak
+# robak.idz_w_prawo(5)
+# NameError: name 'robak' is not defined
