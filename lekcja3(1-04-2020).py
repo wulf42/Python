@@ -132,11 +132,28 @@ class Słowa:
         else:
             return "brak palindromów"
     def sprawdz_czy_metagramy(self):
-        pass
+        a = self.słowo_1
+        b = self.słowo_2
+        a_l = len(a)
+        b_l = len(b)
+        test = 0
+        liczenie = 0
+        for n in a:
+            if (a[test] == b[test]):
+                liczenie += 1
+            else:
+                pass
+            test += 1
+
+        if(liczenie == a_l-1 and a_l == b_l):
+            return "Metagram"
+        else:
+            return "Nie metagram"
     def sprawdz_czy_anagramy(self):
         pass
         
 
 
-slowo = Słowa("kajak", "ala")
+slowo = Słowa("kajak", "kajai")
 print(f"{slowo.sprawdz_czy_palindrom()}")
+print(f"{slowo.sprawdz_czy_metagramy()}")
