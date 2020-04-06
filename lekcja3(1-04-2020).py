@@ -126,11 +126,12 @@ class Słowa:
         if (self.p1 and self.p2):
             return f"{self.słowo_1} i {self.słowo_2} to palindromy"
         elif (self.p1):
-            return f"wyraz {self.słowo_1} to palindrom"
+            return f"Wyraz {self.słowo_1} to palindrom"
         elif (self.p2):
-            return f"wyraz {self.słowo_2} to palindrom"
+            return f"Wyraz {self.słowo_2} to palindrom"
         else:
-            return "brak palindromów"
+            return "Brak palindromów"
+
     def sprawdz_czy_metagramy(self):
         a = self.słowo_1
         b = self.słowo_2
@@ -138,22 +139,41 @@ class Słowa:
         b_l = len(b)
         test = 0
         liczenie = 0
-        for n in a:
-            if (a[test] == b[test]):
-                liczenie += 1
-            else:
-                pass
-            test += 1
-
-        if(liczenie == a_l-1 and a_l == b_l):
-            return "Metagram"
+        if(a_l == b_l):
+            for n in a:
+                if (a[test] == b[test]):
+                    liczenie += 1
+                else:
+                    pass
+                test += 1
         else:
-            return "Nie metagram"
+            return "Nie metagramy"
+        if(liczenie == a_l-1):
+            return "Metagramy"
+        else:
+            return "Nie metagramy"
+
     def sprawdz_czy_anagramy(self):
-        pass
-        
+        a = self.słowo_1
+        b = self.słowo_2
+        c = []
+        d = []
+        for m in a:
+            if(m in a and m not in c):
+                c.append(m)
+        for m in b:
+            if(m in b and m not in d):
+                d.append(m)
+        c.sort()
+        d.sort()
+        if c == d:
+            return "Anagramy"
+        else:
+            return "Nie Anagramy"
+
+    def wyświetl_wyrazy(self):
+        return f"Wyrazy: {self.słowo_1} i {self.słowo_2}"
 
 
-slowo = Słowa("kajak", "kajai")
-print(f"{slowo.sprawdz_czy_palindrom()}")
-print(f"{slowo.sprawdz_czy_metagramy()}")
+slowo = Słowa("ala", "alaa")
+print(f"{slowo.wyświetl_wyrazy()}\n{slowo.sprawdz_czy_palindrom()}\n{slowo.sprawdz_czy_metagramy()}\n{slowo.sprawdz_czy_anagramy()}")
