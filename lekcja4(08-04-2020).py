@@ -306,7 +306,7 @@ main()
 # Zadanie 10
 import itertools
 print("Zadanie 10:")
-n = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+n = [1, 2, 3, 4, 5]
 x = itertools.combinations(n, 3)
 i = 0
 while(i != 10):
