@@ -255,7 +255,6 @@ main()
 # Zadanie 8
 print("Zadanie 8:")
 
-
 class Samogloski:
     def __init__(self, data):
         self.data = data
@@ -273,7 +272,6 @@ class Samogloski:
                 if samogloski[i] == self.data[self.index]:
                     print(self.data[self.index])
             self.index += 1
-
 
 def main():
     for i in Samogloski("wyraz"):
@@ -300,7 +298,6 @@ def main():
     print(next(liczby))
     print(next(liczby))
 
-
 main()
 
 # Zadanie 10
@@ -316,7 +313,6 @@ while(i != 10):
 # Zadanie 11
 print("Zadanie 11:")
 
-
 def ciagf(n):
     a = b = 1
     for i in range(n):
@@ -327,7 +323,6 @@ def ciagf(n):
 ciag = ciagf(10)
 for i in range(10):
     print(next(ciag))
-
 
 # Zadanie 12
 print("Zadanie 12:")
