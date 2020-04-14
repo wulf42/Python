@@ -1,5 +1,4 @@
 # Zadanie 1
-import itertools
 print("Zadanie 1:")
 
 
@@ -305,6 +304,7 @@ def main():
 main()
 
 # Zadanie 10
+import itertools
 print("Zadanie 10:")
 n = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 x = itertools.combinations(n, 3)
