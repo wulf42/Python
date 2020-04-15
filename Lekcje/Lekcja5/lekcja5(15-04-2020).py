@@ -1,0 +1,1 @@
+print("Lekcja 5")
