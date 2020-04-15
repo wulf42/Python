@@ -40,3 +40,7 @@ ptvsd*.log
 pydevd*.log
 nodeLanguageServer/**
 nodeLanguageServer.*/**
+env
+env/*
+.vscode
+.vscode/*
