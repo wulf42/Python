@@ -1,6 +1,0 @@
-print("Jak masz na imię?")
-imie = input()
-print("Ile masz lat?")
-wiek = input()
-sto = 2020+100-int(wiek)
-print(f"Masz na imię {imie} i masz {wiek} lat, w roku {sto} będziesz mieć 100 lat")
