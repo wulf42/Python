@@ -18,4 +18,8 @@ print("Zadanie 3: ")
 # przyjmowała jeden parametr ‘n’ w postaci liczby całkowitej
 # zwracała tablicę Numpy o wymiarach n*n kolejnych liczb całkowitych poczynając od 1
 # Istnieją sposoby na szybkie stworzenie bardziej rozbudowanych tablic/macierzy.
-
+def funkcja(n):
+    A = np.arange(1,n*n+1)
+    B = A.reshape(n, n)
+    print(B)
+funkcja(5)    
