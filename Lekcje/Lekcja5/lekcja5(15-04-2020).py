@@ -18,8 +18,56 @@ print("Zadanie 3: ")
 # przyjmowała jeden parametr ‘n’ w postaci liczby całkowitej
 # zwracała tablicę Numpy o wymiarach n*n kolejnych liczb całkowitych poczynając od 1
 # Istnieją sposoby na szybkie stworzenie bardziej rozbudowanych tablic/macierzy.
-def funkcja(n):
-    A = np.arange(1,n*n+1)
+
+
+def funkcjazad3(n):
+    A = np.arange(1, n*n+1)
     B = A.reshape(n, n)
     print(B)
-funkcja(5)    
+
+
+funkcjazad3(4)
+
+
+print("Zadanie 4: ")
+# napisz funkcję, która będzie przyjmowała 2 parametry:
+# liczbę, która będzie podstawą operacji potęgowania oraz ilość kolejnych potęg do wygenerowania.
+# Korzystając z funkcji logspace generuj tablicę jednowymiarową kolejnych potęg podanej liczby,
+# np. generuj(2,4) -> [2 4 8 16]
+
+
+def funkcjazad4(n, x):
+    print("???????")
+
+
+funkcjazad4(2, 4)
+
+
+print("Zadanie 5: ")
+# Napisz funkcję, która:
+# na wejściu przyjmuje jeden parametr określający długość wektora,
+# na podstawie parametru generuje wektor, ale w kolejności odwróconej (czyli np. dla n=3 =>[3 2 1])
+# generuje macierz diagonalną z w/w wektorem jako przekątną
+
+
+def funkcjazad5(n):
+    A = np.arange(1, n+1)
+    B = sorted(A, reverse=True)
+    print(f"Wektor:\n{B}")
+    B_diag = np.diag(B)
+    print(f"Macierz:\n{B_diag}")
+
+
+funkcjazad5(4)
+
+print("Zadanie 6: ")
+# Stwórz skrypt który na wyjściu wyświetli macierz numpy(tablica wielowymiarowa) w postaci wykreślanki,
+# gdzie jedno słowo będzie wypisane w kolumnie, jedno w wierszu i jedno po ukosie.
+# Jedno z tych słów powinno być wypisane od prawej do lewej.
+
+
+def funkcjazad6(n):
+    pass
+
+
+funkcjazad6(4)
