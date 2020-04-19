@@ -37,10 +37,11 @@ print("Zadanie 4: ")
 
 
 def funkcjazad4(n, x):
-    print("???????")
+    A = np.logspace(1, x, num=x, base=n, dtype=int)
+    print(A)
 
 
-funkcjazad4(2, 4)
+funkcjazad4(5, 5)
 
 
 print("Zadanie 5: ")
