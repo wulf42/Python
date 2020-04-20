@@ -41,7 +41,7 @@ def funkcjazad4(n, x):
     print(A)
 
 
-funkcjazad4(5, 5)
+funkcjazad4(2, 10)
 
 
 print("Zadanie 5: ")
@@ -71,4 +71,39 @@ def funkcjazad6(n):
     pass
 
 
-funkcjazad6(4)
+funkcjazad6(6)
+print("Zadanie 7: ")
+# Napisz funkcję, która wygeneruje macierz wielowymiarową postaci:
+# [[2 4 6]
+#  [4 2 4]
+#  [6 4 2]]
+# funkcja przyjmuje parametr n, który określa wymiary macierzy jako n*n
+# i umieszcza wielokrotność liczby 2 na kolejnych jej przekątnych rozchodzących się od głównej przekątnej.
+def funkcjazad7(n):
+    przek=[]
+    for i in range(n):
+        przek.append(2)            
+    A = np.diag(przek) 
+    #
+    for a in range(0,n):
+        for b in range(0,n):
+            if(a==b+1 or b==a+1):  
+                A[a,b]=2*2
+            if(a==b+2 or b==a+2):  
+                A[a,b]=2*3
+            if(a==b+3 or b==a+3):  
+                A[a,b]=2*4   
+            if(a==b+4 or b==a+4):  
+                A[a,b]=2*5
+            if(a==b+5 or b==a+5):  
+                A[a,b]=2*6  
+            if(a==b+6 or b==a+6):  
+                A[a,b]=2*7         
+    #                 
+    print(f"Macierz:\n{A}")      
+        
+
+
+
+funkcjazad7(7)
+ 
