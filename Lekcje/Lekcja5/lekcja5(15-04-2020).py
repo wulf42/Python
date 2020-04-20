@@ -61,7 +61,7 @@ def funkcjazad5(n):
 
 funkcjazad5(4)
 
-print("Zadanie 6: ")
+print("Zadanie 6: wykreślanka ")
 # Stwórz skrypt który na wyjściu wyświetli macierz numpy(tablica wielowymiarowa) w postaci wykreślanki,
 # gdzie jedno słowo będzie wypisane w kolumnie, jedno w wierszu i jedno po ukosie.
 # Jedno z tych słów powinno być wypisane od prawej do lewej.
@@ -84,26 +84,16 @@ def funkcjazad7(n):
     for i in range(n):
         przek.append(2)            
     A = np.diag(przek) 
-    #
     for a in range(0,n):
         for b in range(0,n):
-            if(a==b+1 or b==a+1):  
-                A[a,b]=2*2
-            if(a==b+2 or b==a+2):  
-                A[a,b]=2*3
-            if(a==b+3 or b==a+3):  
-                A[a,b]=2*4   
-            if(a==b+4 or b==a+4):  
-                A[a,b]=2*5
-            if(a==b+5 or b==a+5):  
-                A[a,b]=2*6  
-            if(a==b+6 or b==a+6):  
-                A[a,b]=2*7         
-    #                 
+            for c in range(1,n+1):
+                if(a==b+c or b==a+c):  
+                    A[a,b]=2*(c+1)    
+                 
     print(f"Macierz:\n{A}")      
         
 
 
 
-funkcjazad7(7)
+funkcjazad7(15)
  
