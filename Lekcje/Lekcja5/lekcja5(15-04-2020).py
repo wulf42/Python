@@ -68,7 +68,13 @@ print("Zadanie 6: wykreślanka ")
 
 
 def funkcjazad6(n):
-    pass
+    slowa = ['marcin', 'uihqke', 'csłqwe', 'hweawe', 'akzcat']
+    s = [[], [], [], [], []]
+    # marcin 1 linjka, miła po ukosie, mucha 1 kolumna, taczka od tylu ostatni wiersz
+    for i in range(0, 5, 1):
+        s[i] = np.array(list(slowa[i]))
+        s[i] = np.fromiter(slowa[i], dtype='U1')
+        print(s[i])
 
 
 funkcjazad6(6)
@@ -79,21 +85,47 @@ print("Zadanie 7: ")
 #  [6 4 2]]
 # funkcja przyjmuje parametr n, który określa wymiary macierzy jako n*n
 # i umieszcza wielokrotność liczby 2 na kolejnych jej przekątnych rozchodzących się od głównej przekątnej.
-def funkcjazad7(n):
-    przek=[]
-    for i in range(n):
-        przek.append(2)            
-    A = np.diag(przek) 
-    for a in range(0,n):
-        for b in range(0,n):
-            for c in range(1,n+1):
-                if(a==b+c or b==a+c):  
-                    A[a,b]=2*(c+1)    
-                 
-    print(f"Macierz:\n{A}")      
-        
 
+
+def funkcjazad7(n):
+    przek = [2 for x in range(n)]
+    A = np.diag(przek)
+    for a in range(0, n):
+        for b in range(0, n):
+            for c in range(1, n+1):
+                if(a == b+c or b == a+c):
+                    A[a, b] = 2*(c+1)
+
+    print(f"Macierz:\n{A}")
 
 
 funkcjazad7(15)
- 
+
+
+print("Zadanie 8: ")
+# jako parametr wejściowy będzie przyjmowała tablicę wielowymiarową numpy oraz parametr ‘kierunek’,
+# parametr kierunek określa czy tablica wejściowa będzie dzielona w pionie czy poziomie
+# funkcja dzieli tablicę wejściową na pół (napisz warunek, który wyświetli komunikat, że ilość wierszy lub kolumn, w zależności od kierunku podziału, nie pozwala na operację)
+
+
+def funkcjazad8(n):
+    pass
+
+
+funkcjazad8(1)
+
+
+print("Zadanie 9: ")
+# Wykorzystaj poznane na zajęciach funkcje biblioteki Numpy i stwórz macierz 5x5, 
+# która będzie zawierała kolejne wartości ciągu Fibonacciego.
+
+def funkcjazad9(n):
+    a = [1, 1]
+    for i in range(n*n-2):
+        a.append(a[i] + a[(i + 1)])           
+    fi = np.asarray(a)
+    b=np.reshape(fi,(n,n))
+    print(b)
+
+funkcjazad9(5)
+
