@@ -39,3 +39,6 @@ print(df.sort_values('Liczba', ascending=False).groupby(
 # najbardziej popularne imię dziewczynki i chłopca w całym danym okresie
 print("g:")
 print(df.groupby(['Plec','Imie']).agg({'Liczba':['sum']}).sort_values(('Liczba','sum'),ascending=False).iloc[[0,1]])
+
+# zadanie 3
+print("Zadanie 3")
