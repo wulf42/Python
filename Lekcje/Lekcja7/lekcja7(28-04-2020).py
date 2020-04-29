@@ -34,17 +34,7 @@ print(df[df['Plec'] == "M"].agg({'Liczba': [sum]}))
 print(df[df['Plec'] == "K"].agg({'Liczba': [sum]}))
 # najbardziej popularne imię dziewczynki i chłopca w danym roku ( czyli po 2 rekordy na rok)
 print("f:")
-print(df.sort_values('Liczba', ascending=False).groupby(['Rok', 'Plec']).nth(0))
-
-
-
-
-
-
-
-
-
-
-
+print(df.sort_values('Liczba', ascending=False).groupby(
+    ['Rok', 'Plec']).nth(0))
 # najbardziej popularne imię dziewczynki i chłopca w całym danym okresie
-print("y")
+print("g:")
