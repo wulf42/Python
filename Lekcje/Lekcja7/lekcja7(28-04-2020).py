@@ -40,7 +40,7 @@ os.system('cls')
 # print("g:")
 # print(df.groupby(['Plec','Imie']).agg({'Liczba':['sum']}).sort_values(('Liczba','sum'),ascending=False).iloc[[0,1]])
 
-# zadanie 3 
+# zadanie 3
 print("Zadanie 3")
 xlsx = pd.ExcelFile(
     'D:\programowanie\wizualizacja danych\Lekcje\Lekcja7\zamowienia.xlsx')
@@ -58,4 +58,13 @@ print("c:")
 print(df.groupby('Sprzedawca')['Sprzedawca'].count())
 # sumę zamówień dla każdego kraju
 print("d:")
-print()
+print(df.groupby(['Kraj']).agg({'Utarg': ['sum']}))
+# sumę zamówień dla roku 2005, dla sprzedawców z Polski
+print("e:")
+print(df[(df['Kraj'] == 'Polska') & (df['Data zamowienia'] >= '01-01-2005')
+         & (df['Data zamowienia'] <= '31-12-2005')].agg({'Utarg': ['sum']}))
+# średnią kwotę zamówienia w 2004 roku
+print("\nf:", end=" ")
+print(df['Utarg'][(df['Data zamowienia'] >= '01-01-2004')
+                  & (df['Data zamowienia'] <= '31-12-2004')].mean())
+# zapisz dane za 2004 rok do pliku zamówienia_2004.csv a dane za 2005 do pliku zamówienia_2005.csv
