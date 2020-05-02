@@ -8,15 +8,21 @@ os.system('cls')
 # Zadanie 1 Stwórz wykres liniowy, który wyświetli liczbę urodzonych dzieci dla każdego roku.
 xlsx = pd.ExcelFile('D:\programowanie\wizualizacja danych\Lekcje\Lekcja8(9_pandas_2)\imiona.xlsx')
 df=pd.read_excel(xlsx,'Arkusz1')  
-a=df.groupby('Rok').agg({'Liczba': ['sum']})
-wykres = a.plot(marker='+')
-wykres.set_ylabel('Ilość')
-wykres.set_xlabel('Rok')
-wykres.legend().remove()
-plt.title('Ilość urodzonych dzieci dla każdego roku')
-plt.show()
+# a=df.groupby('Rok').agg({'Liczba': ['sum']})
+# wykres = a.plot(marker='+')
+# wykres.set_ylabel('Ilość')
+# wykres.set_xlabel('Rok')
+# wykres.legend().remove()
+# plt.title('Ilość urodzonych dzieci dla każdego roku')
+# plt.show()
 
 # Zadanie 2 Stwórz wykres słupkowy, który wyświetli liczbę urodzonych chłopców i dziewczynek z całego zbioru.
+df=df.groupby('Plec').agg({'Liczba': ['sum']})
+wykres = df.plot.bar()
+plt.title('Ilość urodzonych dzieci ze względu na płeć')
+wykres.legend().remove()
+wykres.set_ylabel('Ilość [Mln]')
+plt.show()
 
 # Zadanie 3 Wykres kołowy z wartościami % ukazującymi ilość urodzonych chłopców i dziewczynek w ostatnich 5 latach z datasetu.
 
