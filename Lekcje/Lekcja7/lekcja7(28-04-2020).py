@@ -69,8 +69,11 @@ print("\nf:", end=" ")
 print(df['Utarg'][(df['Data zamowienia'] >= '01-01-2004')
                   & (df['Data zamowienia'] <= '31-12-2004')].mean())
 # zapisz dane za 2004 rok do pliku zamówienia_2004.csv a dane za 2005 do pliku zamówienia_2005.csv
-df2004=df[(df['Data zamowienia'] >= '01-01-2004') & (df['Data zamowienia'] <= '31-12-2004')]
-df2004.to_csv('D:\programowanie\wizualizacja danych\Lekcje\Lekcja7\zamówienia_2004.csv')
-df2005=df[(df['Data zamowienia'] >= '01-01-2005') & (df['Data zamowienia'] <= '31-12-2005')]
-df2005.to_csv('D:\programowanie\wizualizacja danych\Lekcje\Lekcja7\zamówienia_2005.csv')
-
+df2004 = df[(df['Data zamowienia'] >= '01-01-2004') &
+            (df['Data zamowienia'] <= '31-12-2004')]
+df2004.to_csv(
+    'D:\programowanie\wizualizacja danych\Lekcje\Lekcja7\zamówienia_2004.csv')
+df2005 = df[(df['Data zamowienia'] >= '01-01-2005') &
+            (df['Data zamowienia'] <= '31-12-2005')]
+df2005.to_csv(
+    'D:\programowanie\wizualizacja danych\Lekcje\Lekcja7\zamówienia_2005.csv')
