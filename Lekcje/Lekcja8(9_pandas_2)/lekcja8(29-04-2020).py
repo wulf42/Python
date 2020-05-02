@@ -26,18 +26,13 @@ wykres.set_ylabel('Ilość [Mln]')
 # plt.show()
 
 # Zadanie 3 Wykres kołowy z wartościami % ukazującymi ilość urodzonych chłopców i dziewczynek w ostatnich 5 latach z datasetu.
-c = df.groupby(['Rok','Plec']).agg({'Liczba': ['sum']}).sort_values(('Rok'), ascending=False).head(10)
-wykres = c.plot.pie(subplots=True,figsize=(10, 10),fontsize=12)
-plt.title('Ilość urodzonych dzieci w ostatnich 5 latach ze względu na płeć i rok urodzenia')
+c = df.groupby(['Rok', 'Plec']).agg({'Liczba': ['sum']}).sort_values(
+    ('Rok'), ascending=False).head(10)
+wykres = c.plot.pie(subplots=True, figsize=(10, 10), fontsize=12)
+plt.title(
+    'Ilość urodzonych dzieci w ostatnich 5 latach ze względu na płeć i rok urodzenia')
 plt.show()
 # Zadanie 4 Z repozytorium UCI (httpa://rchive.ics.uci.edu/ml/index.php) pobierz dataset Iris i za pomocą wykresu punktowego (scattered) wyświetl wartość 2 wybranych cech tego datasetu. Dla każdego rodzaju kwiatu użyj innego koloru na wykresie. Przykład można znaleźć w galerii wykresów biblioteki matplotlib - link w materiałach matplotlib.
-
-
-
-
-
-
-
 
 
 
