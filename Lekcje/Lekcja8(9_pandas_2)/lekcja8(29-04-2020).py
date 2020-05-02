@@ -23,7 +23,7 @@ wykres = b.plot.bar()
 plt.title('Ilość urodzonych dzieci ze względu na płeć')
 wykres.legend().remove()
 wykres.set_ylabel('Ilość [Mln]')
-# plt.show()
+plt.show()
 
 # Zadanie 3 Wykres kołowy z wartościami % ukazującymi ilość urodzonych chłopców i dziewczynek w ostatnich 5 latach z datasetu.
 c = df.groupby(['Rok', 'Plec']).agg({'Liczba': ['sum']}).sort_values(
