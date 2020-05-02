@@ -1,9 +1,20 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import xlrd
+import openpyxl
 import os
 os.system('cls')
 # Zadanie 1 Stwórz wykres liniowy, który wyświetli liczbę urodzonych dzieci dla każdego roku.
+xlsx = pd.ExcelFile('D:\programowanie\wizualizacja danych\Lekcje\Lekcja8(9_pandas_2)\imiona.xlsx')
+df=pd.read_excel(xlsx,'Arkusz1')  
+a=df.groupby('Rok').agg({'Liczba': ['sum']})
+wykres = a.plot.bar()
+wykres.set_ylabel('Ilość')
+wykres.set_xlabel('Rok')
+wykres.legend().remove()
+plt.title('Ilość urodzonych dzieci dla każdego roku')
+plt.show()
 
 # Zadanie 2 Stwórz wykres słupkowy, który wyświetli liczbę urodzonych chłopców i dziewczynek z całego zbioru.
 
