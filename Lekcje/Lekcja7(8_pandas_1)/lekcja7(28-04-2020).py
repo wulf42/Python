@@ -9,7 +9,7 @@ os.system('cls')
 # zadanie 1
 print("Zadanie 1")
 xlsx = pd.ExcelFile(
-    'D:\programowanie\wizualizacja danych\Lekcje\Lekcja7\imiona.xlsx')
+    'D:\programowanie\wizualizacja danych\Lekcje\Lekcja7(8_pandas_1)\imiona.xlsx')
 df = pd.read_excel(xlsx, 'Arkusz1')
 print(df)
 
@@ -44,7 +44,7 @@ print(df.groupby(['Plec', 'Imie']).agg({'Liczba': ['sum']}).sort_values(
 # zadanie 3
 print("Zadanie 3")
 xlsx = pd.ExcelFile(
-    'D:\programowanie\wizualizacja danych\Lekcje\Lekcja7\zamowienia.xlsx')
+    'D:\programowanie\wizualizacja danych\Lekcje\Lekcja7(8_pandas_1)\zamowienia.xlsx')
 df = pd.read_excel(xlsx, 'zamowienia')
 # listę unikalnych nazwisk sprzedawców (przetwarzając zwróconą pojedynczą kolumnę z DataFrame)
 print("a:", end="   ")
@@ -72,8 +72,8 @@ print(df['Utarg'][(df['Data zamowienia'] >= '01-01-2004')
 df2004 = df[(df['Data zamowienia'] >= '01-01-2004') &
             (df['Data zamowienia'] <= '31-12-2004')]
 df2004.to_csv(
-    'D:\programowanie\wizualizacja danych\Lekcje\Lekcja7\zamówienia_2004.csv')
+    'D:\programowanie\wizualizacja danych\Lekcje\Lekcja7(8_pandas_1)\zamówienia_2004.csv')
 df2005 = df[(df['Data zamowienia'] >= '01-01-2005') &
             (df['Data zamowienia'] <= '31-12-2005')]
 df2005.to_csv(
-    'D:\programowanie\wizualizacja danych\Lekcje\Lekcja7\zamówienia_2005.csv')
+    'D:\programowanie\wizualizacja danych\Lekcje\Lekcja7(8_pandas_1)\zamówienia_2005.csv')
