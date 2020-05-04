@@ -35,7 +35,6 @@ plt.show()
 # Zadanie 4 Z repozytorium UCI (httpa://rchive.ics.uci.edu/ml/index.php) pobierz dataset Iris i za pomocą wykresu punktowego (scattered) wyświetl wartość 2 wybranych cech tego datasetu. Dla każdego rodzaju kwiatu użyj innego koloru na wykresie. Przykład można znaleźć w galerii wykresów biblioteki matplotlib - link w materiałach matplotlib.
 
 
-
 # Zadanie 5 Wyświetl na pomocą wykresu słupkowego ilość złożonych zamówień przez poszczególnych sprzedawców (zbiór danych zamówienia.csv).
 df = pd.read_csv(
     'D:\programowanie\wizualizacja danych\Lekcje\Lekcja7(8_pandas_1)\zamowienia.csv', sep=";")
