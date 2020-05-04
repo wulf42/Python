@@ -37,9 +37,8 @@ plt.show()
 
 
 # Zadanie 5 Wyświetl na pomocą wykresu słupkowego ilość złożonych zamówień przez poszczególnych sprzedawców (zbiór danych zamówienia.csv).
-xlsx = pd.ExcelFile(
-    'D:\programowanie\wizualizacja danych\Lekcje\Lekcja7(8_pandas_1)\zamowienia.xlsx')
-df = pd.read_excel(xlsx, 'zamowienia')
+df = pd.read_csv(
+    'D:\programowanie\wizualizacja danych\Lekcje\Lekcja7(8_pandas_1)\zamowienia.csv', sep=";")
 e = df.groupby('Sprzedawca')['Sprzedawca'].count()
 wykres = e.plot.bar()
 plt.title('Ilość zamówień złożonych przez poszczególnych sprzedawców')
