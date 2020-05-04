@@ -43,9 +43,9 @@ print(df.groupby(['Plec', 'Imie']).agg({'Liczba': ['sum']}).sort_values(
 
 # zadanie 3
 print("Zadanie 3")
-xlsx = pd.ExcelFile(
-    'D:\programowanie\wizualizacja danych\Lekcje\Lekcja7(8_pandas_1)\zamowienia.xlsx')
-df = pd.read_excel(xlsx, 'zamowienia')
+
+df = pd.read_csv(
+    'D:\programowanie\wizualizacja danych\Lekcje\Lekcja7(8_pandas_1)\zamowienia.csv', sep=";")
 # listę unikalnych nazwisk sprzedawców (przetwarzając zwróconą pojedynczą kolumnę z DataFrame)
 print("a:", end="   ")
 print(df['Sprzedawca'].unique())
