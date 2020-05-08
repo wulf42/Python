@@ -1,7 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import os
-
 # Zadanie 1
 # Na wykresie wyświetl wykres liniowy funkcji f(x) = 1/x dla x ϵ [1, 20].
 # Dodaj etykietę do linii wykresu i wyświetl legendę.
@@ -22,4 +21,14 @@ import os
 # plt.plot(a,'g>')
 # plt.title('Funkcja 1/x dla x ϵ [1, 20]')
 # plt.xticks(np.arange(0, 22, step=1))
+# plt.show()
+# Zadanie 3
+# Na jednym wykresie wygeneruj wykresy funkcji sin(x) oraz cos(x) dla x ϵ [0, 30] z krokiem 0.1. Dodaj etykiety i legendę do wykresu.
+# x = np.arange(0, 30, 0.1)
+# s = np.sin(x)
+# c = np.cos(x)    
+# plt.plot(x, s, label='sin(x)')
+# plt.plot(x, c, label='cos(x)')
+# plt.title('Funkcje sin(x) i cos(x)  dla x ϵ [0, 30]')
+# plt.legend(loc=4)
 # plt.show()
