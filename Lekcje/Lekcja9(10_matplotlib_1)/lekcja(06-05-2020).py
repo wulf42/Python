@@ -1,6 +1,8 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import os
+import pandas as pd
+os.system('cls')
 # Zadanie 1
 # Na wykresie wyświetl wykres liniowy funkcji f(x) = 1/x dla x ϵ [1, 20].
 # Dodaj etykietę do linii wykresu i wyświetl legendę.
@@ -51,4 +53,19 @@ plt.title('Wykres sin(x),sin(x)')
 plt.ylabel('sin(x)')
 plt.xlabel('x')
 plt.legend(loc=6)
+plt.show()
+
+# Zadanie 5
+# Korzystając ze zbioru danych Iris (https://archive.ics.uci.edu/ml/datasets/iris) wygeneruj wykres punktowy,
+# gdzie wektor x to wartość ‘sepal length’ a y to ‘sepal width’,
+# dodaj paletę kolorów c na przykładzie listingu 6 a parametr s niech będzie wartością absolutną z różnicy wartości poszczególnych elementów wektorów x oraz y.
+
+df = pd.read_csv("D:\programowanie\wizualizacja danych\Lekcje\Lekcja9(10_matplotlib_1)\iris.data", sep=",", names=[
+                 "sepal length in cm", "sepal width in cm", "petal length in cm", "petal width in cm", "class"])
+c = np.random.randint(0, 50, 150)
+x = df['sepal length in cm']
+y = df['sepal width in cm']
+plt.scatter(x, y, c=c)
+plt.xlabel('sepal length')
+plt.ylabel('sepal width')
 plt.show()
