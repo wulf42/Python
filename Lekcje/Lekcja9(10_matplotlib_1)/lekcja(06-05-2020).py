@@ -9,52 +9,52 @@ os.system('cls')
 # Dodaj etykietę do linii wykresu i wyświetl legendę.
 # Dodaj odpowiednie etykiety do osi wykresu (‘x’, ’f(x)’) oraz ustaw zakres osi na (0, 1) oraz (1, długość wektora x).
 
-a = []
-for i in range(1, 22):
-    a.append(1/i)
-plt.plot(a)
-plt.xlabel('funkcja 1/x dla x ϵ [1, 20]')
-plt.xticks(np.arange(0, 22, step=1))
-plt.show()
+# a = []
+# for i in range(1, 22):
+#     a.append(1/i)
+# plt.plot(a)
+# plt.xlabel('funkcja 1/x dla x ϵ [1, 20]')
+# plt.xticks(np.arange(0, 22, step=1))
+# plt.show()
 
 # Zadanie 2
 # Zmodyfikuj wykres z zadania 1 tak, żeby styl wykresu wyglądał tak jak na poniższym zrzucie ekranu.
 
-a = []
-for i in range(1, 22):
-    a.append(1/i)
-plt.plot(a, 'g:')
-plt.plot(a, 'g>')
-plt.title('Funkcja 1/x dla x ϵ [1, 20]')
-plt.xticks(np.arange(0, 22, step=1))
-plt.show()
+# a = []
+# for i in range(1, 22):
+#     a.append(1/i)
+# plt.plot(a, 'g:')
+# plt.plot(a, 'g>')
+# plt.title('Funkcja 1/x dla x ϵ [1, 20]')
+# plt.xticks(np.arange(0, 22, step=1))
+# plt.show()
 
 # Zadanie 3
 # Na jednym wykresie wygeneruj wykresy funkcji sin(x) oraz cos(x) dla x ϵ [0, 30] z krokiem 0.1. Dodaj etykiety i legendę do wykresu.
 
-x = np.arange(0, 30, 0.1)
-s = np.sin(x)
-c = np.cos(x)
-plt.plot(x, s, label='sin(x)')
-plt.plot(x, c, label='cos(x)')
-plt.title('Funkcje sin(x) i cos(x)  dla x ϵ [0, 30]')
-plt.legend(loc=4)
-plt.show()
+# x = np.arange(0, 30, 0.1)
+# s = np.sin(x)
+# c = np.cos(x)
+# plt.plot(x, s, label='sin(x)')
+# plt.plot(x, c, label='cos(x)')
+# plt.title('Funkcje sin(x) i cos(x)  dla x ϵ [0, 30]')
+# plt.legend(loc=4)
+# plt.show()
 
 # Zadanie 4
 # Dodaj drugi wykres funkcji sinus do zadania 3 i zmodyfikuj parametry funkcji,
 # tak aby osiągnąć efekt podobny do tego na poniższym zrzucie ekranu.
 
-x = np.arange(0, 30, 0.1)
-s = np.sin(x)*-1
-s2 = np.sin(x)+2
-plt.plot(x, s, label='sin(x)')
-plt.plot(x, s2, label='sin(x)')
-plt.title('Wykres sin(x),sin(x)')
-plt.ylabel('sin(x)')
-plt.xlabel('x')
-plt.legend(loc=6)
-plt.show()
+# x = np.arange(0, 30, 0.1)
+# s = np.sin(x)*-1
+# s2 = np.sin(x)+2
+# plt.plot(x, s, label='sin(x)')
+# plt.plot(x, s2, label='sin(x)')
+# plt.title('Wykres sin(x),sin(x)')
+# plt.ylabel('sin(x)')
+# plt.xlabel('x')
+# plt.legend(loc=6)
+# plt.show()
 
 # Zadanie 5
 # Korzystając ze zbioru danych Iris (https://archive.ics.uci.edu/ml/datasets/iris) wygeneruj wykres punktowy,
@@ -77,38 +77,48 @@ plt.show()
 # 2 wykres – wykres liniowy, gdzie będą dwie linie, jedna dla ilości urodzonych kobiet, druga dla mężczyzn dla każdego roku z osobna. Czyli y to ilość narodzonych kobiet lub mężczyzn (dwie linie), x to rok.
 # 3 wykres – wykres słupkowy przedstawiający sumę urodzonych dzieci w każdym roku.
 
-
-xlsx = pd.ExcelFile(
-    'D:\programowanie\wizualizacja danych\Lekcje\Lekcja8(9_pandas_2)\imiona.xlsx')
-df = pd.read_excel(xlsx, 'Arkusz1')
-k=range(2000,2018,1)
-
+# xlsx = pd.ExcelFile(
+#     'D:\programowanie\wizualizacja danych\Lekcje\Lekcja8(9_pandas_2)\imiona.xlsx')
+# df = pd.read_excel(xlsx, 'Arkusz1')
+# k=range(2000,2018,1)
 
 
-a=df.agg({'Liczba': [sum]})  #dzieci ogólnie
 
-b1=df[df['Plec'] == "M"].groupby(['Rok']).agg({'Liczba': [sum]})  #chłopcy na rok
-b2=df[df['Plec'] == "K"].groupby(['Rok']).agg({'Liczba': [sum]})  #dziewczynki na rok
+# a=df.agg({'Liczba': [sum]})  #dzieci ogólnie
 
-c = df.groupby(['Rok']).agg({'Liczba': ['sum']}) #suma urodzinych dzieci na rok
+# b1=df[df['Plec'] == "M"].groupby(['Rok']).agg({'Liczba': [sum]})  #chłopcy na rok
+# b2=df[df['Plec'] == "K"].groupby(['Rok']).agg({'Liczba': [sum]})  #dziewczynki na rok
 
-##plt.plot(k, a, label='Ogólnie')
+# c = df.groupby(['Rok']).agg({'Liczba': ['sum']}) #suma urodzinych dzieci na rok
 
-plt.plot(k, b1, label='Chłopcy')
-plt.plot(k, b2, label='Dziewczynki')
-plt.plot(k, c, label='Ogólnie')
+# ##plt.plot(k, a, label='Ogólnie')
+
+# plt.plot(k, b1, label='Chłopcy')
+# plt.plot(k, b2, label='Dziewczynki')
+# plt.plot(k, c, label='Ogólnie')
 
 
-plt.xticks((range(2000,2018,2)))
-plt.xlabel('Rok')
-plt.ylabel('Ilość')
-plt.legend()
-plt.show()
+# plt.xticks((range(2000,2018,2)))
+# plt.xlabel('Rok')
+# plt.ylabel('Ilość')
+# plt.legend()
+# plt.show()
+
+
 # Zadanie 7
 # Korzystając z tutoriala pod adresem https://towardsdatascience.com/matplotlib-tutorial-learn-basics-of-pythons-powerful-plotting-library-b5d1b8f67596 lub
-# innego zmodyfikuj wykres 2 z zadania 6 tak, aby zamiast wykresu liniowego przedstawiał wykres łupkowy skumulowany
+# innego zmodyfikuj wykres 2 z zadania 6 tak, aby zamiast wykresu liniowego przedstawiał wykres słupkowy skumulowany
 # (czyli jeden słupek dla kobiet i mężczyzn, ale składający się z dwóch „nałożonych” na siebie słupków).
 
+# xlsx = pd.ExcelFile(
+#     'D:\programowanie\wizualizacja danych\Lekcje\Lekcja8(9_pandas_2)\imiona.xlsx')
+# df = pd.read_excel(xlsx, 'Arkusz1')
+# k=range(2000,2018,1)
+# b1=df[df['Plec'] == "M"].groupby(['Rok']).agg({'Liczba': [sum]})  #chłopcy na rok
+# b2=df[df['Plec'] == "K"].groupby(['Rok']).agg({'Liczba': [sum]})  #dziewczynki na rok
+# b1=b1.values
+# plt.bar(k, b1 )
+# plt.show()
 
 # Zadanie 8
 # Napisz funkcję, która losowo rzuca dwiema kostkami k6 n razy. Wynik rzutów zapisywany jest w postaci listy sum oczek z
