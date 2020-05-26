@@ -1,0 +1,5 @@
+Ala 5
+Marek 8
+Julia 10
+Szymon 3
+Wincenty 1
