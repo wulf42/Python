@@ -13,7 +13,7 @@ y = np.random.sample(3)
 ax.scatter(x, y, zs = 0 , zdir = 'z' ,color="r",  label = 'jabłko' )
 
 
-            # wąż      
+            # 1 wąż      
 x = np.random.sample(4)
 y = np.random.sample(4)
 
