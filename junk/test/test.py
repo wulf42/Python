@@ -6,3 +6,6 @@ for i in range(0, 30,1):
         n[i][j] = 0
 print(n)
 print("test")
+
+
+
